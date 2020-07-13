@@ -1,13 +1,11 @@
 package com.motoclub.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
+
+import com.motoclub.dto.MotoDto;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MotoController {
+public interface MotoController {
+    public void createMoto(MotoDto moto);
 
-    @GetMapping("/testing")
-    public String hello(){
-        return "hellooooo!";
-    }
 }
