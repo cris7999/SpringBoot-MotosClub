@@ -2,10 +2,11 @@ package com.motoclub.controller;
 
 
 import com.motoclub.dto.MotoDto;
-import org.springframework.web.bind.annotation.RestController;
 
-@RestController
+import java.util.List;
+
 public interface MotoController {
-    public void createMoto(MotoDto moto);
-
+    void createMoto(MotoDto moto);
+    List<MotoDto> getMotos();
+    String echo();
 }

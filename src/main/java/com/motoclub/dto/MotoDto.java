@@ -4,9 +4,17 @@ public class MotoDto {
 
     private long id;
     private String model;
-    private String fabricator;
+    private String manufactor;
     private int year;
     private String type;
+
+    public MotoDto(long id, String model, String manufacter, int year, String type) {
+        this.id = id;
+        this.model = model;
+        this.manufactor = manufacter;
+        this.year = year;
+        this.type = type;
+    }
 
     public long getId() {
         return id;
@@ -24,12 +32,12 @@ public class MotoDto {
         this.model = model;
     }
 
-    public String getFabricator() {
-        return fabricator;
+    public String getManufactor() {
+        return manufactor;
     }
 
-    public void setFabricator(String fabricator) {
-        this.fabricator = fabricator;
+    public void setManufactor(String manufactor) {
+        this.manufactor = manufactor;
     }
 
     public int getYear() {
@@ -50,6 +58,6 @@ public class MotoDto {
 
     @Override
     public String toString() {
-        return "MotoDto [id=" + id + ", model=" + model + " fabricator:"+fabricator+"]";
+        return "MotoDto [id=" + id + ", model=" + model + " fabricator:"+ manufactor +"]";
     }
 }

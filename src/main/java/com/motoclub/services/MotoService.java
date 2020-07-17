@@ -3,7 +3,10 @@ package com.motoclub.services;
 import com.motoclub.dto.MotoDto;
 import com.motoclub.entity.Moto;
 
+import java.util.List;
+
 public interface MotoService {
 
-    public Moto createMoto(MotoDto moto);
+    Moto createMoto(MotoDto moto);
+    List<MotoDto> getMotos();
 }

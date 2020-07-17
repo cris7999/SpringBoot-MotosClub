@@ -13,16 +13,24 @@ public class Moto{
     private long id;
 
     private String model;
-    private String fabricator;
-    private int year;
+    private String manufacter;
     private String type;
+    private int year;
+
+    public Moto(){}
+    public Moto(long id){
+        this.id = id;
+    }
 
     public Moto(MotoDto motoDto){
         this.id = motoDto.getId();
         this.model = motoDto.getModel();
-        this.fabricator = motoDto.getFabricator();
+        this.manufacter = motoDto.getManufactor();
         this.year = motoDto.getYear();
         this.type = motoDto.getType();
+    }
+    public MotoDto getMotoDto(){
+        return new MotoDto(this.id, this.model, this .manufacter, this.year, this.type);
     }
     public String getModel() {
         return model;
@@ -32,12 +40,12 @@ public class Moto{
         this.model = model;
     }
 
-    public String getFabricator() {
-        return fabricator;
+    public String getManufacter() {
+        return manufacter;
     }
 
-    public void setFabricator(String fabricator) {
-        this.fabricator = fabricator;
+    public void setManufacter(String manufacter) {
+        this.manufacter = manufacter;
     }
 
     public int getYear() {
